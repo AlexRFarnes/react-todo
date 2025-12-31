@@ -1,0 +1,87 @@
+.todoItem {
+  padding: 15px;
+  font-size: 1.2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: flex-start;
+}
+
+.todoItem:has(input:checked) .todoText {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.todoContent {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.todoDateContainer {
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.todoDate {
+  color: #fff;
+  margin-left: 10px;
+}
+
+.buttonContainer {
+  margin-left: auto;
+  display: flex;
+  align-self: stretch;
+  gap: 15px;
+}
+
+.button {
+  cursor: pointer;
+  padding: 10px 15px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+  transition: background-color 0.3s ease;
+}
+
+.editButton {
+  background-color: #3b39a4;
+}
+
+.editButton:hover {
+  background-color: #242365;
+  border: 1px solid #3b39a4;
+}
+
+.deleteButton {
+  background-color: #a9212a;
+}
+
+.deleteButton:hover {
+  background-color: #6b161b;
+  border: 1px solid #a9212a;
+}
+
+@media (min-width: 768px) {
+  .todoItem {
+    padding: 10px;
+    font-size: 1rem;
+    gap: 10px;
+  }
+
+  .buttonContainer {
+    gap: 10px;
+  }
+}
