@@ -1,7 +1,7 @@
 .header {
-  background-color: hsl(235, 33%, 20%);
-  padding: 20px;
-  border-radius: 10px;
+  background-color: var(--section-bg-color);
+  padding: var(--padding);
+  border-radius: var(--border-radius);
   margin-bottom: 20px;
   text-align: center;
 }

@@ -1,15 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-Default Light Theme :root {
-  --bg-color: #ffffff;
-  --text-color: #333333;
+/* Global Variables */
+:root {
+  --success-color: #39a464;
+  --dark-success-color: #246539;
+  --danger-color: #a9212a;
+  --dark-danger-color: #6b161b;
+  --main-color: #3b39a4;
+  --dark-main-color: #242365;
+  --button-bg-color: #000;
+  --button-text-color: #fff;
+  --button-hover-bg-color: #442240;
+
+  --padding: 20px;
+  --margin: 20px;
+  --border: 1px solid var(--text-color);
+  --border-radius: 10px;
+  --box-shadow: 0 0 10px 0 rgba(var(--section-bg-color), 0.1);
+
+  /* Default Light Theme Variables */
+  --bg-color: #dedede;
+  --text-color: #222222;
+  --highlight-color: #442240;
+  --section-bg-color: #969fff;
 }
 
 /* Dark Theme Override */
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: #222222;
-    --text-color: #ffffff;
+    --text-color: #dedede;
+
+    --highlight-color: #ff00f7;
+
+    --section-bg-color: #222544;
   }
 }
 

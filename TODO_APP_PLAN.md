@@ -37,8 +37,8 @@
 
 7. **Filter Todos**
 
-   - [ ] All / Active / Completed
-   - [ ] Filter buttons or tabs
+   - [x] All / Active / Completed
+   - [x] Filter buttons or tabs
 
 8. **Clear Completed**
 

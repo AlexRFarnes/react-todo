@@ -1,0 +1,24 @@
+.filterSection {
+  background-color: var(--section-bg-color);
+  padding: var(--padding);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--margin);
+}
+
+.title {
+  align-self: flex-start;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+.group {
+  display: flex;
+  gap: 5px;
+}
