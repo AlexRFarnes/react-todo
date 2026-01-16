@@ -42,14 +42,14 @@
 
 8. **Clear Completed**
 
-   - [ ] Bulk action to remove all completed todos
+   - [x] Bulk action to remove all completed todos
 
 9. **Todo Count**
 
    - [ ] Show total, active, and completed counts
 
 10. **Keyboard Shortcuts**
-    - [ ] Enter to add
+    - [x] Enter to add
     - [ ] Escape to cancel edit
 
 ### Nice-to-Have Features
