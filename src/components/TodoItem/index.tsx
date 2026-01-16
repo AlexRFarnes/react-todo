@@ -1,22 +1,16 @@
 import { format } from "date-fns";
-import type { Todo } from "../../App";
+import type { Todo } from "../../store/todos";
 import styles from "./index.module.css";
 import { useState, useRef } from "react";
 import EditTodoForm from "../EditTodoForm";
+import { useTodosStore } from "../../store/todos";
 
 interface Props {
   todo: Todo;
-  toggleTodo: (id: number) => void;
-  deleteTodo: (id: number) => void;
-  updateTodo: (id: number, text: string) => void;
 }
 
-export default function TodoItem({
-  todo,
-  toggleTodo,
-  deleteTodo,
-  updateTodo,
-}: Props) {
+export default function TodoItem({ todo }: Props) {
+  const { toggleTodo, deleteTodo, updateTodo } = useTodosStore();
   const [isEditing, setIsEditing] = useState(false);
   const [editedText, setEditedText] = useState(todo.text);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -64,6 +58,7 @@ export default function TodoItem({
       ) : (
         <>
           <input
+            className={styles.toggleCompleted}
             type="checkbox"
             onChange={handleToggleTodo}
             checked={todo.completed}

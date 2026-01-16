@@ -1,11 +1,9 @@
+import { useTodosStore } from "../../store/todos";
 import styles from "./index.module.css";
 import { useState, useRef } from "react";
 
-interface Props {
-  addTodo: (text: string) => void;
-}
-
-export default function InputSection({ addTodo }: Props) {
+export default function InputSection() {
+  const { addTodo } = useTodosStore();
   const [todo, setTodo] = useState("");
   const [error, setError] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);

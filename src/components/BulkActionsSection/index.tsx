@@ -1,14 +1,9 @@
 import styles from "./index.module.css";
+import { useTodosStore } from "../../store/todos";
 
-interface Props {
-  clearCompletedTodos: () => void;
-  markAllCompleted: () => void;
-}
+export default function BulkActionsSection() {
+  const { clearCompletedTodos, markAllCompleted } = useTodosStore();
 
-export default function BulkActionsSection({
-  clearCompletedTodos,
-  markAllCompleted,
-}: Props) {
   return (
     <section className={styles.bulkActionsSection}>
       <h2 className={styles.title}>Actions</h2>

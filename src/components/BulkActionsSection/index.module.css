@@ -24,9 +24,9 @@
   width: 100%;
   padding: var(--padding);
   border-radius: var(--border-radius);
-  border: 1px solid #ccc;
-  background-color: #000;
-  color: #fff;
+  border: 1px solid var(--border-color);
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
   cursor: pointer;
   font-family: inherit;
   font-size: 1.2rem;

@@ -1,35 +1,21 @@
-import type { Todo } from "../../App";
 import styles from "./index.module.css";
 import TodoItem from "../TodoItem";
+import type { Todo } from "../../store/todos";
 
 interface Props {
-  todos: Todo[];
-  toggleTodo: (id: number) => void;
-  deleteTodo: (id: number) => void;
-  updateTodo: (id: number, text: string) => void;
+  filteredTodos: Todo[];
 }
 
-export default function TodoList({
-  todos,
-  toggleTodo,
-  deleteTodo,
-  updateTodo,
-}: Props) {
+export default function TodoList({ filteredTodos }: Props) {
   return (
     <section className={styles.todoListSection}>
       <h2>Task List</h2>
-      {todos.length === 0 ? (
+      {filteredTodos.length === 0 ? (
         <p>Add a new task to get started</p>
       ) : (
         <ul className={styles.todoList}>
-          {todos.map(todo => (
-            <TodoItem
-              key={todo.id}
-              todo={todo}
-              toggleTodo={toggleTodo}
-              deleteTodo={deleteTodo}
-              updateTodo={updateTodo}
-            />
+          {filteredTodos.map(todo => (
+            <TodoItem key={todo.id} todo={todo} />
           ))}
         </ul>
       )}

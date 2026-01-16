@@ -1,7 +1,7 @@
 .todoItem {
   padding: 15px;
   font-size: 1.2rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -11,14 +11,14 @@
 
 .todoItem:has(input:checked) .todoText {
   text-decoration: line-through;
-  color: #ccc;
+  color: var(--border-color);
 }
 
 .checkbox {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 1px solid #ccc;
+  border: 1px solid var(--border-color);
   cursor: pointer;
 }
 
@@ -30,12 +30,16 @@
 
 .todoDateContainer {
   font-size: 0.8rem;
-  color: #ccc;
+  color: var(--text-color);
 }
 
 .todoDate {
-  color: #fff;
+  color: var(--button-text-color);
   margin-left: 10px;
+}
+
+.toggleCompleted {
+  cursor: pointer;
 }
 
 .buttonContainer {
@@ -52,26 +56,26 @@
   border-radius: 5px;
   font-size: 1rem;
   font-weight: 500;
-  color: #000;
+  color: var(--button-text-color);
   transition: background-color 0.3s ease;
 }
 
 .editButton {
-  background-color: #3b39a4;
+  background-color: var(--main-color);
 }
 
 .editButton:hover {
-  background-color: #242365;
-  border: 1px solid #3b39a4;
+  background-color: var(--dark-main-color);
+  border: 1px solid var(--main-color);
 }
 
 .deleteButton {
-  background-color: #a9212a;
+  background-color: var(--danger-color);
 }
 
 .deleteButton:hover {
-  background-color: #6b161b;
-  border: 1px solid #a9212a;
+  background-color: var(--dark-danger-color);
+  border: 1px solid var(--danger-color);
 }
 
 @media (min-width: 768px) {

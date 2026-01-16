@@ -8,13 +8,14 @@
   --dark-danger-color: #6b161b;
   --main-color: #3b39a4;
   --dark-main-color: #242365;
-  --button-bg-color: #000;
-  --button-text-color: #fff;
+  --button-bg-color: #131313;
+  --button-text-color: #f9f9f9;
   --button-hover-bg-color: #442240;
+  --border-color: #ccc;
 
   --padding: 20px;
   --margin: 20px;
-  --border: 1px solid var(--text-color);
+  --border: 1px solid var(--border-color);
   --border-radius: 10px;
   --box-shadow: 0 0 10px 0 rgba(var(--section-bg-color), 0.1);
 
@@ -29,7 +30,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: #222222;
-    --text-color: #dedede;
+    --text-color: #eeeeee;
 
     --highlight-color: #ff00f7;
 
